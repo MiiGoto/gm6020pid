@@ -123,7 +123,7 @@ int pitchPID(int pitchCommand, int pitchValue) {
 }
 
 int yawPID(int yawCommand, int yawValue) {
-  const float ygain[3] = { 9, 0, 0 };
+  const float ygain[3] = { 9, 0, 0 }; //順にP,I,D
   static float yIe, preyPe;
   float yPe = yawCommand - yawValue;
   if(yPe>4096)yPe=yPe-8192;
